@@ -8,7 +8,7 @@ ApplicationWindow {
     visible: true
     width: 1280
     height: 720
-    title: "QML Test"
+    title: "Main Screen"
 
     BottomBar {
         id: bottomBar

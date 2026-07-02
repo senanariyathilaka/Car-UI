@@ -8,6 +8,6 @@ Rectangle {
         bottom: bottomBar.top
         right: parent.right
     }
-    color: "gray"
+
     width: parent.width * 2 / 3
 }

@@ -9,8 +9,9 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Quick Qml)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Quick Qml)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Quick Qml Location Positioning QuickControls2)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Quick Qml Location Positioning QuickControls2)
+
 
 set(PROJECT_SOURCES
     main.cpp
@@ -30,9 +31,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         VERSION 1.0
         QML_FILES
             Main.qml
+            MapScreen.qml
             UI/BottomBar/BottomBar.qml
             UI/RightScreen/RightScreen.qml
             UI/LeftScreen/LeftScreen.qml
+            Map/Gps/gps.qml
     )
 
 else()
@@ -57,6 +60,10 @@ target_link_libraries(hello_world PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::Quick
     Qt${QT_VERSION_MAJOR}::Qml
+    Qt${QT_VERSION_MAJOR}::Location
+    Qt${QT_VERSION_MAJOR}::Positioning
+    Qt${QT_VERSION_MAJOR}::QuickControls2
+
 )
 
 set_target_properties(hello_world PROPERTIES
