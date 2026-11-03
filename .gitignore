@@ -1,6 +1,6 @@
 build-*
 .cache
 compile_commands.json
-launch.json
+.vscode
 *.log
 qt6.natvis
