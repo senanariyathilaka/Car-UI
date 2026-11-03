@@ -3,3 +3,4 @@ build-*
 compile_commands.json
 launch.json
 *.log
+qt6.natvis
