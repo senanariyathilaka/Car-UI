@@ -9,14 +9,12 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Quick Qml Location Positioning QuickControls2)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Quick Qml Location Positioning QuickControls2)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Quick Qml Location Positioning QuickControls2 Quick3D)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Quick Qml Location Positioning QuickControls2 Quick3D)
 
 
 set(PROJECT_SOURCES
     main.cpp
-
-
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -36,6 +34,17 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
             UI/RightScreen/RightScreen.qml
             UI/LeftScreen/LeftScreen.qml
             Map/Gps/gps.qml
+            futuristic_sports_car/Futuristic_Sports_Car_v1_2_.qml
+            Car/Car_Model.qml
+
+        RESOURCES
+            futuristic_sports_car/Futuristic_Sports_Car_v1_2_.qml
+            futuristic_sports_car/meshes/car_mesh_mesh.mesh
+            futuristic_sports_car/meshes/sphere_mesh.mesh
+            futuristic_sports_car/meshes/wheel_front_left_mesh.mesh
+            futuristic_sports_car/meshes/wheel_front_right_mesh.mesh
+            futuristic_sports_car/meshes/wheels_back_mesh.mesh
+
     )
 
 else()

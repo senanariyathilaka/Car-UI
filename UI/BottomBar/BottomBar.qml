@@ -18,10 +18,10 @@ Rectangle {
             text: qsTr("Home")
         }
         TabButton {
-            text: qsTr("Discover")
+            text: qsTr("Navigation")
         }
         TabButton {
-            text: qsTr("Activity")
+            text: qsTr("Settings")
         }
     }
 
