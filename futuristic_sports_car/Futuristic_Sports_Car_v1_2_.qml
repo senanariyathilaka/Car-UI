@@ -74,16 +74,7 @@ Node {
     Node {
         id: rootNode
         objectName: "RootNode"
-        Model {
-            id: background
-            objectName: "background"
-            rotation: Qt.quaternion(0.707107, -0.707107, 0, 0)
-            scale.x: 100
-            scale.y: 100
-            scale.z: 100
-            source: "meshes/sphere_mesh.mesh"
-            materials: [floor_material]
-        }
+
         PerspectiveCamera {
             id: camera_1_camera
             objectName: "camera 1"
