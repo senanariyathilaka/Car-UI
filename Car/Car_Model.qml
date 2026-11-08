@@ -29,10 +29,14 @@ View3D {
     }
 
     DirectionalLight {
-        eulerRotation.x: 2000
-        eulerRotation.y: 1200
-        eulerRotation.z: 0
-        brightness: 2
+        eulerRotation.z: 5
+        eulerRotation.y: 54
+        eulerRotation.x: -20
+        z: 2986.57788
+        scale.x: 100
+        scale.y: 100
+        scale.z: 100
+        brightness: 1
     }
 
     Futuristic_Sports_Car_v1_2_ {
